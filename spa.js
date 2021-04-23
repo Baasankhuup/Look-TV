@@ -1171,30 +1171,30 @@ const myMain = new MySite("myMain");
 //#region Create HomePage
 const homeDataObj = {
   Big:{
-          img1: "WIMG/image1.jpg", 
-          img2: "WIMG/image2.jpg",
-          img3: "WIMG/image3.jpg"
+          img1: "Look-TV/WIMG/image1.jpg", 
+          img2: "Look-TV/WIMG/image2.jpg",
+          img3: "Look-TV/WIMG/image3.jpg"
          },
   prev: "❮",
   next: "❯",
   New:"Шинээр нэмэгдсэн кино",
   NewImgs:[
-    {img:"HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1"},
-    {img:"HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2"},
-    {img:"HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3"},
-    {img:"HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4"}
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1"},
+    {img:"Look-TV/HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2"},
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3"},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4"}
   ],
   View:"Үзсэн кинонууд",
   ViewImgs:[
-    {img:"HIMG/Hit/3.jpg", alt:"Movie1",title:"Movie1"},
-    {img:"HIMG/Olon-angit/2.jpg",alt:"Movie1",title:"Movie2"},
-    {img:"HIMG/Hit/4.jpg", alt:"Movie3",title:"Movie3"},
-    {img:"HIMG/Hit/1.jpg", alt:"Movie4",title:"Movie4"}
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie1",title:"Movie1"},
+    {img:"Look-TV/HIMG/Olon-angit/2.jpg",alt:"Movie1",title:"Movie2"},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie3",title:"Movie3"},
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie4",title:"Movie4"}
   ],
   Title:"Trailer",
   trailer:[
-      {trailer:"Movie/GODZILLAVSKONGTrailer.mp4",type:"video/mp4"},
-      {trailer:"Movie/GODZILLAVSKONGTrailer.ogg",type:"video/ogg"}
+      {trailer:"Look-TV/Movie/GODZILLAVSKONGTrailer.mp4",type:"video/mp4"},
+      {trailer:"Look-TV/Movie/GODZILLAVSKONGTrailer.ogg",type:"video/ogg"}
   ],
   Tolbor:"Төлбөрийн мэдээлэл",
   piece:[
@@ -1209,42 +1209,42 @@ const bagstDataObj = {
   "bagts":[
     {"title":"Хит кино",
       "imgs":[
-        {"img":"HIMG/Hit/1.jpg","alt":"image-1"},
-        {"img":"HIMG/Hit/2.jpg","alt":"image-2"},
-        {"img":"HIMG/Hit/3.jpg","alt":"image-3"},
-        {"img":"HIMG/Hit/4.jpg","alt":"image-4"}
+        {"img":"Look-TV/HIMG/Hit/1.jpg","alt":"image-1"},
+        {"img":"Look-TV/HIMG/Hit/2.jpg","alt":"image-2"},
+        {"img":"Look-TV/HIMG/Hit/3.jpg","alt":"image-3"},
+        {"img":"Look-TV/HIMG/Hit/4.jpg","alt":"image-4"}
       ]
     },
     {"title":"Аниме",
         "imgs":[
-          {"img":"HIMG/Anime/1.jpg","alt":"image-1"},
-          {"img":"HIMG/Anime/2.jpg","alt":"image-2"},
-          {"img":"HIMG/Anime/3.jpg","alt":"image-3"},
-          {"img":"HIMG/Anime/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Anime/1.jpg","alt":"image-1"},
+          {"img":"Look-TV/HIMG/Anime/2.jpg","alt":"image-2"},
+          {"img":"Look-TV/HIMG/Anime/3.jpg","alt":"image-3"},
+          {"img":"Look-TV/HIMG/Anime/4.jpg","alt":"image-4"}
         ]
       },
         {"title":"HBO олон ангит",
         "imgs":[
-          {"img":"HIMG/Olon-angit/1.jpg","alt":"image-1"},
-          {"img":"HIMG/Olon-angit/2.jpg","alt":"image-2"},
-          {"img":"HIMG/Olon-angit/3.jpg","alt":"image-3"},
-          {"img":"HIMG/Olon-angit/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Olon-angit/1.jpg","alt":"image-1"},
+          {"img":"Look-TV/HIMG/Olon-angit/2.jpg","alt":"image-2"},
+          {"img":"Look-TV/HIMG/Olon-angit/3.jpg","alt":"image-3"},
+          {"img":"Look-TV/HIMG/Olon-angit/4.jpg","alt":"image-4"}
         ]
       },
         {"title":"Хүүхдийн Кино",
         "imgs":[
-          {"img":"HIMG/Child/1.jpg","alt":"image-1"},
-          {"img":"HIMG/Child/2.jpg","alt":"image-2"},
-          {"img":"HIMG/Child/3.jpg","alt":"image-3"},
-          {"img":"HIMG/Child/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Child/1.jpg","alt":"image-1"},
+          {"img":"Look-TV/HIMG/Child/2.jpg","alt":"image-2"},
+          {"img":"Look-TV/HIMG/Child/3.jpg","alt":"image-3"},
+          {"img":"Look-TV/HIMG/Child/4.jpg","alt":"image-4"}
         ]
       },
         {"title":"Орос-Европ багц",
         "imgs":[
-          {"img":"HIMG/Oros-Europe/1.jpg","alt":"image-1"},
-          {"img":"HIMG/Oros-Europe/2.jpg","alt":"image-2"},
-          {"img":"HIMG/Oros-Europe/3.jpg","alt":"image-3"},
-          {"img":"HIMG/Oros-Europe/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Oros-Europe/1.jpg","alt":"image-1"},
+          {"img":"Look-TV/HIMG/Oros-Europe/2.jpg","alt":"image-2"},
+          {"img":"Look-TV/HIMG/Oros-Europe/3.jpg","alt":"image-3"},
+          {"img":"Look-TV/HIMG/Oros-Europe/4.jpg","alt":"image-4"}
         ]
       }
   ]
@@ -1261,29 +1261,29 @@ const tureesDataObj = {
     "round":[
       {
         "information":[
-          {"src":"HIMG/Child/1.jpg","name":"Трансформ","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Child/2.jpg","name":"Пороро","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Child/6.jpg","name":"Таяо","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Child/4.jpg","name":"Ноён Стони","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Child/5.jpg","name":"Мөнх-Тунх","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
+          {"src":"Look-TV/HIMG/Child/1.jpg","name":"Трансформ","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Child/2.jpg","name":"Пороро","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Child/6.jpg","name":"Таяо","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Child/4.jpg","name":"Ноён Стони","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Child/5.jpg","name":"Мөнх-Тунх","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
         ]
       },
       {
         "information":[
-          {"src":"HIMG/Anime/1.jpg","name":"My Hero","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Anime/2.jpg","name":"Япон хүүхэлдэй","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Anime/3.jpg","name":"MMO Junkie","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Anime/4.jpg","name":"Orange","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Anime/5.jpg","name":"Ноён Стони","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
+          {"src":"Look-TV/HIMG/Anime/1.jpg","name":"My Hero","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Anime/2.jpg","name":"Япон хүүхэлдэй","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Anime/3.jpg","name":"MMO Junkie","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Anime/4.jpg","name":"Orange","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Anime/5.jpg","name":"Ноён Стони","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
         ]
       },
       {
         "information":[
-          {"src":"HIMG/Hit/1.jpg","name":"Явуулын гуанз","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Hit/2.jpg","name":"Залуу тулаанч","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Hit/3.jpg","name":"Цагдаагийн түүх","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Hit/4.jpg","name":"Цагдаагийн түүх3","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
-          {"src":"HIMG/Hit/5.jpg","name":"Үхлийн тоглоом","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
+          {"src":"Look-TV/HIMG/Hit/1.jpg","name":"Явуулын гуанз","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Hit/2.jpg","name":"Залуу тулаанч","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Hit/3.jpg","name":"Цагдаагийн түүх","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Hit/4.jpg","name":"Цагдаагийн түүх3","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"},
+          {"src":"Look-TV/HIMG/Hit/5.jpg","name":"Үхлийн тоглоом","start":"2021/08/08 23:59:59","end":"2021/09/08 23:59:59","due":"Сунгах"}
         ]
       }
     ]
