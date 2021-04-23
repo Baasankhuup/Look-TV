@@ -1171,30 +1171,30 @@ const myMain = new MySite("myMain");
 //#region Create HomePage
 const homeDataObj = {
   Big:{
-          img1: "WIMG/image1.jpg", 
-          img2: "WIMG/image2.jpg",
-          img3: "WIMG/image3.jpg"
+          img1: "Look-TV/WIMG/image1.jpg", 
+          img2: "Look-TV/WIMG/image2.jpg",
+          img3: "Look-TV/WIMG/image3.jpg"
          },
   prev: "❮",
   next: "❯",
   New:"Шинээр нэмэгдсэн кино",
   NewImgs:[
-    {img:"HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1"},
-    {img:"HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2"},
-    {img:"HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3"},
-    {img:"HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4"}
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1"},
+    {img:"Look-TV/HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2"},
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3"},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4"}
   ],
   View:"Үзсэн кинонууд",
   ViewImgs:[
-    {img:"HIMG/Hit/3.jpg", alt:"Movie1",title:"Movie1"},
-    {img:"HIMG/Olon-angit/2.jpg",alt:"Movie1",title:"Movie2"},
-    {img:"HIMG/Hit/4.jpg", alt:"Movie3",title:"Movie3"},
-    {img:"HIMG/Hit/1.jpg", alt:"Movie4",title:"Movie4"}
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie1",title:"Movie1"},
+    {img:"Look-TV/HIMG/Olon-angit/2.jpg",alt:"Movie1",title:"Movie2"},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie3",title:"Movie3"},
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie4",title:"Movie4"}
   ],
   Title:"Trailer",
   trailer:[
-      {trailer:"Movie/GODZILLAVSKONGTrailer.mp4",type:"video/mp4"},
-      {trailer:"Movie/GODZILLAVSKONGTrailer.ogg",type:"video/ogg"}
+      {trailer:"Look-TV/Movie/GODZILLAVSKONGTrailer.mp4",type:"video/mp4"},
+      {trailer:"Look-TV/Movie/GODZILLAVSKONGTrailer.ogg",type:"video/ogg"}
   ],
   Tolbor:"Төлбөрийн мэдээлэл",
   piece:[
