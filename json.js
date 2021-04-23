@@ -105,7 +105,7 @@ export default class RecentNews {
 const gebi = id => document.getElementById(id);
 
 //Create RecentNews object, with url
-const recentNews = new RecentNews("https://api.jsonbin.io/b/607576050ed6f819beaae4ed");
+const recentNews = new RecentNews("https://api.jsonbin.io/b/6082a7aea2213a0c1429930f");
 
 //Load content from RecentNewsURL
 recentNews.Download("main");
