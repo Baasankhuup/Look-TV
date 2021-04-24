@@ -70,7 +70,7 @@ export default class RecentNews {
 
     //download then filter() then map() then reduce() 
     Download(targetElement) {
-        fetch(`${this._recentNewsUrl}/latest`)
+        fetch(`https://api.jsonbin.io/b/6082a7aea2213a0c1429930f/latest`)
         .then( result => {
             result.json()
                 .then(jsob => {
