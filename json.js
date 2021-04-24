@@ -70,7 +70,7 @@ export default class RecentNews {
 
     //download then filter() then map() then reduce() 
     Download(targetElement) {
-        fetch(`https://api.jsonbin.io/b/6082a7aea2213a0c1429930f/latest`)
+        fetch(`${this._recentNewsUrl}/latest`)
         .then( result => {
             result.json()
                 .then(jsob => {
@@ -105,7 +105,7 @@ export default class RecentNews {
 const gebi = id => document.getElementById(id);
 
 //Create RecentNews object, with url
-const recentNews = new RecentNews("https://api.jsonbin.io/b/6082a7aea2213a0c1429930f");
+const recentNews = new RecentNews("https://api.jsonbin.io/b/607576050ed6f819beaae4ed");
 
 //Load content from RecentNewsURL
 recentNews.Download("main");
