@@ -29,7 +29,7 @@ class Home {
   A(bet) {
     console.log(bet);
     
-    return html`
+    return html` 
     <img src="${bet.img}" alt="${bet.alt}" title="${bet.title}">`;
   }
   C(Teb) {
