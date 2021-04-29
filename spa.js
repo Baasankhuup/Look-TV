@@ -721,8 +721,8 @@ history.pushState = function()
 
 myMain.OnRoute(location.pathname);
 //myMain.OnRoute("/home");
-myMain.OnRoute("/Bagts");
-//myMain.OnRoute("/sale");
+//myMain.OnRoute("/Bagts");
+myMain.OnRoute("/sale");
 //myMain.OnRoute("/Turees");
 //myMain.OnRoute("/Tv");
 //myMain.OnRoute("/information");
