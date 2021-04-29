@@ -2,7 +2,8 @@
 
 /* jshint esversion: 10 */
 import html from "./modules/components/utils.js"
-
+import Home from './modules/products/home.js';
+import Bagst from './modules/products/bagts.js'
 class MySite{
     constructor(appID){
         this.appContainerID = appID || "myMain";
@@ -20,209 +21,13 @@ class MySite{
         return html`<section><div>Not found :( 404</div></section>`
     };
 }
-//#region Home Render
-class Home {
-  constructor(objData){
-      this.data = objData;
-  }
-  //#region loops
-  A(bet) {
-    console.log(bet);
-    
-    return html` 
-    <img src="${bet.img}" alt="${bet.alt}" title="${bet.title}">`;
-  }
-  C(Teb) {
-    console.log(Teb);
-    
-    return html`
-    <img src="${Teb.img}" alt="${Teb.alt}" title="${Teb.title}">`;
-  }
-  Trail(TrData){
-    return html`
-    <source src="${TrData.trailer}" type="${TrData.type}">`;
-  }
-  Tol(bor){
-      return html`
-      <div class="${bor.divClass}">
-          <h2>${bor.UseDate}</h2>
-          <h3>${bor.tolbor}</h3>
-          <h3>${bor.Bagts}</h3>
-          <h3>${bor.Tohooromj}</h3>
-          <button>${bor.Avah}</button>
-        </div>
-      `
-  }
-  //#endregion
-     Render() {
-      let NewRendered = "";
-      for (let b of this.data.NewImgs) {
-        NewRendered+=this.A(b);
-      }
-      let ViewRendered = "";
-      for (let d of this.data.ViewImgs) {
-        ViewRendered+=this.C(d);
-      }
-      let TraileRender = "";
-      for(let tr of this.data.trailer){
-          TraileRender+=this.Trail(tr);
-      }
-      let Tohoormj="";
-      for(let toh of this.data.piece){
-          Tohoormj+=this.Tol(toh);
-      }
-      return html`
-    <style>
-    @import "https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap";@import "https://fonts.googleapis.com/css2?family=Oswald&family=Train+One&display=swap";.MovieImg{width:80%;text-align:center;}#Big-slide{text-align:center;}.stars-left-1{display:inline-block;float:right;margin-top:12%;}.stars-right-1{display:inline-block;float:left;margin-top:12%;}.stars-left-2{display:inline-block;float:right;margin-top:12%;}.stars-right-2{display:inline-block;float:left;margin-top:12%;}div{display:inline-block;}main button{border:rgba(0,0,0,0);background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;}@media only screen and (min-width: 1278px){.Big-Next{margin-left:33%;cursor:pointer;position:absolute;top:48%;width:auto;font-weight:700;font-size:72px;}.Big-Prev{margin-left:-36.5%;position:absolute;top:48%;width:auto;font-weight:700;font-size:72px;}.News h2{margin-top:1%;margin-bottom:.5%;padding-left:10%;font-family:'Roboto Condensed',sans-serif;font-size:27px;}.News button{font-size:40px;}.stars-left-1{margin-right:4.5%;}.stars-right-1{margin-left:3.5%;}.stars-left-2{margin-right:4.5%;}.stars-right-2{margin-left:3.5%;margin-right:1%;}.view,.Smallslide{text-align:center;}.Smallslide img{margin-right:6px;margin-left:6px;width:20%;height:auto;}.trailer{padding-left:35%;}.trailer h3{font-size:30px;margin-left:6%;margin-bottom:1%;width:10%;text-align:center;border-bottom:2px solid;}.table{text-align:center;margin-left:5%;margin-bottom:14%;width:90%;}.piece_price1,.piece_price2,.piece_price3{border:2px solid;margin-left:0 auto auto 6%;display:inline-block;width:25%;}.table h1{margin-bottom:1%;font-family:'Oswald',sans-serif;margin-left:35%;margin-right:35%;border-bottom:3px solid;font-size:36px;}.table h2{margin:auto;border-bottom:2px solid;}.table h3{margin:auto;border-bottom:2px solid;}.table button{color:#fff;background-color:#000;}}@media only screen and (min-width: 760px) and (max-width:1278px){.text{margin-left:14%;color:#fff;top:6%;font-size:25px;position:absolute;width:auto;border-bottom:2px solid;}.Big-Next{margin-left:34%;background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;position:absolute;top:180px;width:auto;font-weight:700;font-size:32px;}.Big-Prev{margin-left:-38.5%;background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;position:absolute;top:180px;width:auto;font-weight:700;font-size:32px;}.News button{font-size:30px;}.stars-left-1{margin-right:4.5%;}.stars-right-1{margin-left:3.5%;margin-right:1%;}.stars-left-2{margin-right:4.5%;}.stars-right-2{margin-left:3.5%;margin-right:1%;}.News h2{margin-top:1%;margin-bottom:.5%;padding-left:12%;font-family:'Roboto Condensed',sans-serif;font-size:20px;}.view,.Smallslide{text-align:center;}.Smallslide img{margin-right:4px;margin-left:4px;width:18%;height:auto;}.trailer{padding-left:35%;}.trailer h3{font-size:25px;margin-left:2px;margin-bottom:1%;width:20%;text-align:center;border-bottom:2px solid;}video{width:90%;height:90%;}.piece_price1,.piece_price2,.piece_price3{border:2px solid;margin-left:0 auto auto 6%;display:inline-block;width:25%;}.table{text-align:center;margin-left:5%;margin-bottom:20%;width:90%;}.table h1{margin-bottom:1%;font-family:'Oswald',sans-serif;margin-left:30%;margin-right:30%;border-bottom:3px solid;font-size:30px;}.table h2{margin:auto;border-bottom:2px solid;}.table h3{margin:auto;border-bottom:2px solid;}.table button{color:#fff;background-color:#000;}}@media only screen and (min-width: 319px) and (max-width:760px){.Big-Next{margin-left:30%;background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;position:absolute;top:100px;width:auto;font-weight:700;font-size:24px;}.Big-Prev{margin-left:-36.5%;background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;position:absolute;top:100px;width:auto;font-weight:700;font-size:24px;}.News button{font-size:14px;}.stars-left-1{margin-right:2%;}.stars-right-1{margin-left:1.5%;}.stars-left-2{margin-right:2%;}.stars-right-2{margin-left:1.5%;}.News h2{margin-top:1%;margin-bottom:.5%;padding-left:12%;font-family:'Roboto Condensed',sans-serif;font-size:20px;}.view,.Smallslide{text-align:center;}.Smallslide img{margin-right:4px;margin-left:4px;width:18%;height:auto;}.trailer h3{font-size:15px;margin-left:2px;margin-bottom:1%;width:15%;font-family:'Roboto Condensed',sans-serif;font-size:20px;text-align:center;border-bottom:2px solid;}video{width:100%;height:90%;}.piece_price1,.piece_price2,.piece_price3{border:2px solid;margin-left:0 auto auto 6%;display:inline-block;width:25%;}.table{text-align:center;margin-left:5%;margin-bottom:40%;width:90%;}.table h1{margin-bottom:1%;margin-left:20%;margin-right:20%;font-family:'Oswald',sans-serif;border-bottom:3px solid;font-size:20px;}.table h2{margin:auto;border-bottom:2px solid;}.table h3{margin:auto;border-bottom:2px solid;font-size:12px;}.table button{color:#fff;background-color:#000;}}
-    </style>
-      <div id="Big-slide">
-        <div class="mySlides" style="display: block;">
-          <img class="MovieImg" src="${this.data.Big.img1}" alt="dragon">
-        </div>
-        <div class="mySlides" style="text-align: center; display: none;">
-          <img class="MovieImg" src="${this.data.Big.img2}" alt="Нийслэл">
-        </div>
-        <div class="mySlides" style="text-align: center; display: none;">
-          <img class="MovieImg" src="${this.data.Big.img3}" alt="Буцаж">
-        </div>
-        <button class="Big-Prev" >${this.data.prev}</button>
-        <button class="Big-Next">${this.data.next}</button>
-      </div>
-      <section class="News">
-      
-      <h2>${this.data.New}</h2>
-      <div class="Smallslide" style="display: block;">
-          <button class="stars-right-1">${this.data.prev}</button>
-          <button class="stars-left-1">${this.data.next}</button>
-            <div class="Smallslide" style="display: block;">
-              <a href="LookTv-KinoMedeelel.html">
-              ${NewRendered}
-              </a>
-            </div>
-      </div>
-      <div class="Smallslide" style="text-align: center; display: none;">
-          <a href="LookTv-KinoMedeelel.html">
-          ${NewRendered}
-          </a>
-        </div> 
-      </section>
-      <section class="News">
-      <h2>${this.data.View}</h2>
-      <button class="stars-right-2" >❮</button>
-      <button class="stars-left-2">❯</button>
-          <div class="Smallslide" style="display: block;">
-            <a href="LookTv-KinoMedeelel.html">
-            ${ViewRendered}
-            </a>
-          </div>
-          <div class="Smallslide" style="text-align: center; display: none;">
-            <a href="LookTv-KinoMedeelel.html">
-            ${ViewRendered}
-            </a>
-          </div>
-      </section>
-      <section class="trailer">
-        <h3>${this.data.Title}</h3>
-        <video width="750" height="400" controls autoplay muted>
-            ${TraileRender}
-        </video>
-      </section>
-      <section class="table">
-        <h1>${this.data.Tolbor}</h1>
-        ${Tohoormj}
-      </section>
-      `
-  }
-}
-//#endregion
-//#region Багц Render
-class Bagst {
-    constructor(objData){
-        this.data = objData;
-        this.data.bagst=new Array();
-    }
-
-    renderIMG(IMGS){
-      return html`<img src="${IMGS.img}" alt="${IMGS.alt}" title="${IMGS.alt}">`
-    }
-    Render(){
-      const imgs1 = this.data.bagts[0].imgs;
-      const imgs2 = this.data.bagts[1].imgs;
-      const imgs3 = this.data.bagts[2].imgs;
-      const imgs4 = this.data.bagts[3].imgs;
-      const imgs5 = this.data.bagts[4].imgs;
-      let A = "",B="",C="",D="",E="";
-      for(let a of imgs1){
-        A+=this.renderIMG(a)
-      }
-      for(let b of imgs2){
-        B+=this.renderIMG(b)
-      }
-      for(let c of imgs3){
-        C+=this.renderIMG(c)
-      }
-      for(let d of imgs4){
-        D+=this.renderIMG(d)
-      }
-      for(let e of imgs5){
-        E+=this.renderIMG(e)
-      }
-      return html `
-      <style>
-      @import "https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap";main button{border:rgba(0,0,0,0);background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;}@media only screen and (min-width: 1178px){main{margin:7% 8% 15%;text-align:center;font-family:'Open Sans Condensed',sans-serif;font-size:20px;}H1{margin-left:7%;border-bottom:solid;}.HIT-Movie h1{width:10%;}.Anime-Movie h1{width:8%;}.HBO-Movie h1{width:18%;}.Huuhed h1{width:18%;}.Russian h1{width:18%;}section img{width:20%;margin-right:1%;margin-left:1%;}section button{font-size:30px;font-weight:700;}.Next1{display:inline-block;float:right;margin-top:10%;}.Prev1{display:inline-block;float:left;margin-top:10%;}.Next2{display:inline-block;float:right;margin-top:10%;}.Prev2{display:inline-block;float:left;margin-top:10%;}.Next3{display:inline-block;float:right;margin-top:10%;}.Prev3{display:inline-block;float:left;margin-top:10%;}.Next4{display:inline-block;float:right;margin-top:10%;}.Prev4{display:inline-block;float:left;margin-top:10%;}.Next5{display:inline-block;float:right;margin-top:10%;}.Prev5{display:inline-block;float:left;margin-top:10%;}}@media only screen and (min-width: 766px) and (max-width: 1178px){main{margin:7% 8% 15% 12%;text-align:center;font-family:'Open Sans Condensed',sans-serif;font-size:20px;}H1{margin-left:10%;border-bottom:solid;}.HIT-Movie h1{width:14%;}.Anime-Movie h1{width:10%;}.HBO-Movie h1{width:28%;}.Huuhed h1{width:25%;}.Russian h1{width:30%;}section img{width:18%;margin-right:1%;margin-left:1%;}section button{font-size:25px;font-weight:700;}.Next1{display:inline-block;float:right;margin-top:10%;}.Prev1{display:inline-block;float:left;margin-top:10%;}.Next2{display:inline-block;float:right;margin-top:10%;}.Prev2{display:inline-block;float:left;margin-top:10%;}.Next3{display:inline-block;float:right;margin-top:10%;}.Prev3{display:inline-block;float:left;margin-top:10%;}.Next4{display:inline-block;float:right;margin-top:10%;}.Prev4{display:inline-block;float:left;margin-top:10%;}.Next5{display:inline-block;float:right;margin-top:10%;}.Prev5{display:inline-block;float:left;margin-top:10%;}}@media only screen and (min-width:300px) and (max-width:760px){.Prev1,.Next1,.Prev2,.Next2,.Prev3,.Next3,.Prev4,.Next4,.Prev5,.Next5{display:none;}main{text-align:center;font-family:'Open Sans Condensed',sans-serif;font-size:15px;margin:20% 2% 40%;}main img{width:60%;}h1{border-bottom:solid;width:60%;margin-left:auto;margin-right:auto;margin-bottom:.1%;text-align:left;}}
-      </style>
-      <section class="HIT-Movie">
-        <h1>${this.data.bagts[0].title}</h1>
-        <a href="LookTv-KinoMedeelel.html">
-        ${A}
-        </a>
-        <button class="Prev1">❮</button>
-        <button class="Next1">❯</button>
-      </section>
-      <section class="Anime-Movie">
-        <h1>${this.data.bagts[1].title}</h1>
-        <a href="LookTv-KinoMedeelel.html">
-          ${B}
-        </a>
-        <button class="Prev2">❮</button>
-        <button class="Next2">❯</button>
-      </section>
-      <section class="HBO-Movie">
-        <h1>${this.data.bagts[2].title}</h1>
-        <a href="LookTv-KinoMedeelel.html">
-          ${C}
-        </a>
-        <button class="Prev3">❮</button>
-        <button class="Next3">❯</button>
-      </section>
-      <section class="Huuhed">
-        <h1>${this.data.bagts[3].title}</h1>
-        <a href="LookTv-KinoMedeelel.html">
-          ${D}
-        </a>
-        <button class="Prev4">❮</button>
-        <button class="Next4">❯</button>
-      </section>
-      <section class="Russian">
-        <h1>${this.data.bagts[4].title}</h1>
-        <a href="LookTv-KinoMedeelel.html">
-          ${E}
-        </a>
-        <button class="Prev5">❮</button>
-        <button class="Next5">❯</button>
-      </section>
-      `
-    }
-}
-//#endregion
 //#region Sale Render
-export default class Sale {
+class Sale {
     constructor(objData){
         this.data = objData;
     }
     Render(){
         return html`
-        <script src="json.js" type="module"></script>
         <style>
         @import "https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap";@import "https://fonts.googleapis.com/css2?family=DotGothic16&family=Oswald:wght@200&display=swap";section{width:100%;text-align:center;}div{display:inline-block;}main button{border:rgba(0,0,0,0);background-color:rgba(0,0,0,0);color:#fff;cursor:pointer;}@media only screen and (min-width:1260px){.mainSale{margin-top:8%;margin-bottom:15%;}section button{font-size:36px;}.prev1{display:inline-block;float:left;margin-top:12%;margin-left:3%;}.next1{display:inline-block;float:right;margin-top:12%;margin-right:3%;}.prev2{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next2{display:inline-block;float:right;margin-top:12%;margin-right:3%;}.prev3{display:inline-block;float:left;margin-top:12%;margin-left:3%;}.next3{display:inline-block;float:right;margin-top:12%;margin-right:3%;}.prev4{display:inline-block;float:left;margin-top:12%;margin-left:3%;}.next4{display:inline-block;float:right;margin-top:12%;margin-right:3%;}.prev5{display:inline-block;float:left;margin-top:12%;margin-left:3%;}.next5{display:inline-block;float:right;margin-top:12%;margin-right:3%;}h1{text-align:left;font-family:'DotGothic16',sans-serif;font-size:40px;padding-left:15%;margin-bottom:.2%;}h2{font-family:'Oswald',sans-serif;font-size:30px;padding-left:15%;margin-bottom:.2%;margin-top:.2%;}h3{text-align:left;font-size:25px;padding-left:15%;margin-bottom:.2%;margin-top:.2%;}h4{font-family:'DotGothic16',sans-serif;font-size:18px;color:#000;transition:font-size color 2s;}h4:hover{font-size:20px;color:blue;}section>div>a>img{width:200px;transition:width 2s;}section>div>a>img:hover{width:220px;}}@media only screen and (min-width:760px) and (max-width:1023px){.mainSale{margin-top:6%;margin-bottom:18%;}section button{font-size:50px;}.prev1{display:inline-block;float:left;margin-top:13%;margin-left:1%;}.next1{display:inline-block;float:right;margin-top:15%;margin-right:1%;}.prev2{display:inline-block;float:left;margin-top:13%;margin-left:1%;}.next2{display:inline-block;float:right;margin-top:15%;margin-right:1%;}.prev3{display:inline-block;float:left;margin-top:13%;margin-left:2%;}.next3{display:inline-block;float:right;margin-top:15%;margin-right:2%;}.prev4{display:inline-block;float:left;margin-top:13%;margin-left:2%;}.next4{display:inline-block;float:right;margin-top:15%;margin-right:2%;}.prev5{display:inline-block;float:left;margin-top:13%;margin-left:2%;}.next5{display:inline-block;float:right;margin-top:15%;margin-right:2%;}h1{text-align:left;font-family:'DotGothic16',sans-serif;font-size:40px;padding-left:15%;margin-bottom:.2%;}h2{text-align:left;font-family:'Oswald',sans-serif;font-size:30px;padding-left:15%;margin-bottom:.2%;margin-top:.2%;}h3{text-align:left;font-size:25px;padding-left:15%;margin-bottom:1.2%;margin-top:.2%;}h4{display:none;}.zurag5{display:none;}section>div>a>img{width:150px;}}@media only screen and (min-width:1023px) and (max-width:1259px){.mainSale{margin-top:8%;margin-bottom:15%;}section button{font-size:36px;}.prev1{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next1{display:inline-block;float:right;margin-top:12%;margin-right:8%;}.prev2{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next2{display:inline-block;float:right;margin-top:12%;margin-right:8%;}.prev3{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next3{display:inline-block;float:right;margin-top:12%;margin-right:8%;}.prev4{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next4{display:inline-block;float:right;margin-top:12%;margin-right:8%;}.prev5{display:inline-block;float:left;margin-top:12%;margin-left:8%;}.next5{display:inline-block;float:right;margin-top:12%;margin-right:8%;}h1{text-align:left;font-family:'DotGothic16',sans-serif;font-size:40px;padding-left:12%;margin-bottom:.2%;}h2{text-align:left;font-family:'Oswald',sans-serif;font-size:30px;padding-left:4%;padding-left:12%;margin-top:.2%;}h3{text-align:left;font-size:25px;padding-left:12%;margin-bottom:.2%;margin-top:.2%;}h4{font-family:'DotGothic16',sans-serif;font-size:12px;color:#000;transition:font-size color 2s;}h4:hover{font-size:20px;color:blue;}section>div>a>img{width:120px;}}@media only screen and (min-width:360px) and (max-width:760px){.mainSale{margin-top:18%;margin-bottom:40%;}section button{display:none;}h1{text-align:left;font-family:'DotGothic16',sans-serif;font-size:30px;padding-left:15%;margin-bottom:.2%;margin-left:2%;}h2{text-align:left;font-family:'Oswald',sans-serif;font-size:20px;padding-left:15%;margin-bottom:.2%;margin-top:.2%;margin-left:2%;}h3{display:none;}h4{font-family:'DotGothic16',sans-serif;font-size:18px;width:180px;margin:auto;color:#000;transition:font-size color 2s;}h4:hover{font-size:20px;color:blue;}.zurag5{display:none;}section>div>a>img{width:200px;transition:width 2s;}section>div>a>img:hover{width:210px;}}
         </style>
@@ -884,7 +689,7 @@ const signup = new Signup(UpDataObj);
 //Route list
 myMain.AddRoute("/","/home", home);
 myMain.AddRoute("/", "/Bagts", bagts);
-myMain.AddRoute("/", "/Sale", sale);
+myMain.AddRoute("/", "/sale", sale);
 myMain.AddRoute("/", "/Turees", turees);
 myMain.AddRoute("/", "/Tv", tv);
 myMain.AddRoute("/", "/information", information);
@@ -913,10 +718,11 @@ history.pushState = function()
     History.prototype.pushState.apply(history, arguments);
     myMain.OnRoute(document.location.pathname);
 }
+
 myMain.OnRoute(location.pathname);
 //myMain.OnRoute("/home");
-//myMain.OnRoute("/Bagts");
-//myMain.OnRoute("/Sale");
+myMain.OnRoute("/Bagts");
+//myMain.OnRoute("/sale");
 //myMain.OnRoute("/Turees");
 //myMain.OnRoute("/Tv");
 //myMain.OnRoute("/information");
