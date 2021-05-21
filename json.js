@@ -1,6 +1,6 @@
 import html from "./modules/components/utils.js"
 class RecentNewsItem { 
-    
+
     //constructor
     constructor(Sale) {
         this.Sale= [];
@@ -14,7 +14,7 @@ class RecentNewsItem {
     MRender(A){
         return html`
         <div>
-            <h4>${A.title}</h4>
+            <h4 id="titles">${A.title}</h4>
             <a href="#">
                 <img src="${A.img}" alt="${A.title}" title="${A.title}">
             </a>
@@ -30,7 +30,7 @@ class RecentNewsItem {
         return html`
         <section class="section${this.id}">
             <h1>${this.title}</h1>
-            <h2 class="sale${this.id}">${this.procent}</h2>
+            <h2 class="sale${this.id}" style="text-align:left;">${this.procent}</h2>
             <h3 class="date">${this.DueDate}</h3>
             ${C}
             <button class="prev1">❮</button>
@@ -76,14 +76,14 @@ export default class RecentNews {
                 .then(jsob => {
 
                     //filter only new NewsItem     
-                    const filteredArray = jsob.filter( newsItem =>Date.parse(newsItem.DueDate) > Date.parse(this._recentNewsList.length > 0 ? this._recentNewsList[this._recentNewsList.length].DueDate : "2021-01-01"))
+                    const filteredArray = jsob.filter( newsItem =>Date.parse(newsItem.DueDate) > Date.parse(this._recentNewsList.length > 0 ? this._recentNewsList[this._recentNewsList.length-1].DueDate : "2021-01-01"))
                     console.log(filteredArray);
                     //updating own javascript
                     if (filteredArray.length > 0) { 
                         // filteredArray.forEach(newNewsItem => { this._recentNewsList.push((new RecentNewsItem(newNewsItem))) });
-                    
+
                         gebi(targetElement).insertAdjacentHTML("afterbegin",
-                            
+
                             filteredArray
                                 .map(newNews => {
                                     const _newNews = new RecentNewsItem(newNews);
@@ -92,12 +92,12 @@ export default class RecentNews {
                                 })
                                 .reduce((prevVal, curVal) => prevVal + curVal, "")
                         );
-                        
+
                     }
                     })    
             })
         .catch(err => { console.log(err) });
-        
+
     }
 }
 
@@ -105,7 +105,8 @@ export default class RecentNews {
 const gebi = id => document.getElementById(id);
 
 //Create RecentNews object, with url
-const recentNews = new RecentNews("https://api.jsonbin.io/b/607576050ed6f819beaae4ed");
+const recentNews = new RecentNews("https://api.jsonbin.io/b/6082a9a59a9aa9333355d066");
+
 
 //Load content from RecentNewsURL
 recentNews.Download("main");
