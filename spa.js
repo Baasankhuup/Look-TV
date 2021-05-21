@@ -18,7 +18,7 @@ class MySite{
         document.getElementById(this.appContainerID).innerHTML = this.appData.get("/").get(route)?.Render() || this.NotFound();
     }
     NotFound() {
-        return html`<section><div>Not found :( 404</div></section>`
+        return html`<section style="margin-top:20%;width:100%; display:flex; color:white;font-weight:bolder;font-size:50px"><div style="text-align:center; width: 100%;background:blue">Not found :( 404</div></section>`
     };
 }
 //#region Sale Render
@@ -185,7 +185,9 @@ class Tv {
           <div class="Televisiz_epir">
             <div class="Tv_title">
               <img src="${this.data.Tvs[0].tv[0].src}" alt="${this.data.Tvs[0].tv[0].name}" title="${this.data.Tvs[0].tv[0].name}">
-              <h2 class="active_date">12:00:01</h2>
+              <h2 class="active_date">
+              <span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </h2>
             </div>
               <video width="660" height="380" controls="" autoplay="" muted="">
                 <source src="${this.data.EPIR[0].src}" type="video/mp4">
@@ -425,16 +427,21 @@ const homeDataObj = {
   Big:{
           img1: "Look-TV/WIMG/image1.jpg", 
           img2: "Look-TV/WIMG/image2.jpg",
-          img3: "Look-TV/WIMG/image3.jpg"
+          img4: "Look-TV/WIMG/image4.jpg",
+          img5: "Look-TV/WIMG/image5.jpg"
          },
   prev: "❮",
   next: "❯",
   New:"Шинээр нэмэгдсэн кино",
   NewImgs:[
-    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1"},
-    {img:"Look-TV/HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2"},
-    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3"},
-    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4"}
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1",display:"display:inline-block"},
+    {img:"Look-TV/HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2",display:"display:inline-block"},
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3",display:"display:inline-block"},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4",display:"display:inline-block"},
+    {img:"Look-TV/HIMG/Hit/1.jpg", alt:"Movie1", title:"Movie1",display:""},
+    {img:"Look-TV/HIMG/Hit/2.jpg", alt:"Movie2", title:"Movie2",display:""},
+    {img:"Look-TV/HIMG/Hit/3.jpg", alt:"Movie3", title:"Movie3",display:""},
+    {img:"Look-TV/HIMG/Hit/4.jpg", alt:"Movie4", title:"Movie4",display:""}
   ],
   View:"Үзсэн кинонууд",
   ViewImgs:[
@@ -657,6 +664,122 @@ const tvDataObj = {
     ]
 };
 //#endregion
+//#region TVRouter
+const tvDataObjRouter = {
+    title:"Кино суваг",
+    Tvs:[
+      {class:"Chapt_Tv dialog-National-channel",title:"Үндсэн сувгууд",
+      tv:[
+        {src:"tv-img/national-channel/1.png",name:"MNB"},
+        {src:"tv-img/national-channel/2.png",name:"MNB2"}
+      ]},
+      {class:"Chapt_Tv dialog-National-package",title:"Үндсэн багц",
+      tv:[
+        {src:"tv-img/national-package/2.png",name:"TV9"},
+        {src:"tv-img/national-package/3.png",name:"ETV"},
+        {src:"tv-img/national-package/4.png",name:"Eagle Tv"},
+        {src:"tv-img/national-package/6.png",name:"MNBA-sports"},
+        {src:"tv-img/national-package/7.png",name:"TV-25"},
+        {src:"tv-img/national-package/8.png",name:"UBS-tv"},
+        {src:"tv-img/national-package/9.png",name:"TV5"},
+        {src:"tv-img/national-package/10.png",name:"VTV"},
+        {src:"tv-img/national-package/12.png",name:"Suld-TV"},
+        {src:"tv-img/national-package/13.png",name:"NTV"},
+        {src:"tv-img/national-package/14.png",name:"OTV"},
+        {src:"tv-img/national-package/15.png",name:"C1"},
+        {src:"tv-img/national-package/16.png",name:"Channel 11 HD"},
+        {src:"tv-img/national-package/17.png",name:"Dream box HD"},
+        {src:"tv-img/national-package/18.png",name:"Education TV"},
+        {src:"tv-img/national-package/19.png",name:"MNC"},
+        {src:"tv-img/national-package/20.png",name:"Royal TV"},
+        {src:"tv-img/national-package/21.png",name:"SPS National"},
+        {src:"tv-img/national-package/22.png",name:"Star HD"},
+        {src:"tv-img/national-package/23.png",name:"SBN TV"},
+        {src:"tv-img/national-package/24.png",name:"Bloomberg TV mongolia"},
+        {src:"tv-img/national-package/25.png",name:"Эх орон"},
+        {src:"tv-img/national-package/26.png",name:"Seven TV"},
+        {src:"tv-img/national-package/27.png",name:"Luxe TV"},
+        {src:"tv-img/national-package/29.png",name:"УИХ чуулган"},
+        {src:"tv-img/national-package/30.png",name:"TV6"},
+        {src:"tv-img/national-package/31.jpg",name:"KBS"},
+        {src:"tv-img/national-package/32.png",name:"Discoury Science"},
+        {src:"tv-img/national-package/33.png",name:"History HD"},
+        {src:"tv-img/national-package/34.png",name:"LIFETIME"},
+        {src:"tv-img/national-package/35.png",name:"HGTV"},
+        {src:"tv-img/national-package/36.png",name:"TRACE HD"},
+        {src:"tv-img/national-package/37.png",name:"EURO sport HD"},
+        {src:"tv-img/national-package/38.png",name:"DMAX HD"},
+        {src:"tv-img/national-package/39.png",name:"Trace Sport Stars"},
+        {src:"tv-img/national-package/40.png",name:"CN HD"},
+        {src:"tv-img/national-package/41.png",name:"Nickelodeon"},
+      ]},
+      {class:"Chapt_Tv dialog-National-family-package",title:"Гэр бүл багц",
+      tv:[
+        {src:"tv-img/family-package/1.png",name:"Natoinal Geographic"},
+        {src:"tv-img/family-package/2.png",name:"Asian Food Channel HD"},
+        {src:"tv-img/family-package/3.png",name:"MTV Asia HD"},
+        {src:"tv-img/family-package/4.png",name:"BBC Lifestyle HD"},
+        {src:"tv-img/family-package/5.png",name:"Cbeebies HD"}
+      ]},
+      {class:"Chapt_Tv dialog-National-HBO-channel",title:"HBO сувгууд",
+      tv:[
+        {src:"tv-img/HBO-channel/1.png",name:"HBO"},
+        {src:"tv-img/HBO-channel/2.png",name:"HBO Signature"},
+        {src:"tv-img/HBO-channel/3.png",name:"HBO Hits"},
+        {src:"tv-img/HBO-channel/4.png",name:"HBO Family"},
+        {src:"tv-img/HBO-channel/5.png",name:"Cinemax"}
+      ]},
+      {class:"Chapt_Tv dialog-entetainment-package",title:"Энтертайнмент Багц",
+      tv:[
+        {src:"tv-img/entertainment-package/1.png",name:"Blue Ant Entertainment"},
+        {src:"tv-img/entertainment-package/2.png",name:"Blue Ant Extreme"},
+        {src:"tv-img/entertainment-package/3.png",name:"BBC Earth HD"},
+        {src:"tv-img/entertainment-package/4.png",name:"Outdoor"},
+        {src:"tv-img/entertainment-package/5.png",name:"MTV Live"}
+      ]},
+      {class:"Chapt_Tv diaiog-sport-package",title:"Спорт багц",
+      tv:[
+        {src:"tv-img/sport-package/1.png", name:"SPS World"},
+        {src:"tv-img/sport-package/2.png", name:"SPS Prime"},
+        {src:"tv-img/sport-package/3.png", name:"SPS Classic"},
+        {src:"tv-img/sport-package/4.png", name:"SPS Fight"}
+      ]},
+      {class:"Chapt_Tv dialog-Traffic-channel",title:"Traffic-channel",
+      tv:[
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel1"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel2"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel3"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel4"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel5"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel6"},
+        {src:"tv-img/traffic-channel/1.png",name:"traffic-channel7"}
+      ]},
+    ],
+
+    EPIR:[
+      {src:"Video/Robocon.mp4"}
+    ],
+    month:"12", day:"11",
+    time_percentage:[
+      {Dates:"08:00:00",Sedev:"Өглөөний хөтөлбөр"},
+      {Dates:"09:00:00",Sedev:"Хүүхдийн кино"},
+      {Dates:"10:00:00",Sedev:"Мэдээ"},
+      {Dates:"11:00:00",Sedev:"Теле хичээл"},
+      {Dates:"12:00:00",Sedev:"Өдрийн мэндчилгээ"},
+      {Dates:"13:00:00",Sedev:"Хүүхдийн кино"},
+      {Dates:"14:00:00",Sedev:"Ая дууны мэндчилгээ"},
+      {Dates:"15:00:00",Sedev:"Мэдээ"},
+      {Dates:"16:00:00",Sedev:"Давталт /УСК/"},
+      {Dates:"17:00:00",Sedev:"Зар сурталчилгаа"},
+      {Dates:"18:00:00",Sedev:"ОАК"},
+      {Dates:"19:00:00",Sedev:"Мэдээ"},
+      {Dates:"20:00:00",Sedev:"Зар сурталчилгаа"},
+      {Dates:"21:00:00",Sedev:"Нэвтрүүлэг"},
+      {Dates:"22:00:00",Sedev:"УСК"},
+      {Dates:"23:00:00",Sedev:"Дууны цаг"}
+    ]
+};
+//#endregion
 //#region Create info
 const infoDataobj = {}
 //#endregion
@@ -680,6 +803,7 @@ const bagts = new Bagst(bagstDataObj);
 const sale = new Sale(saleDataObj);
 const turees = new Turees(tureesDataObj);
 const tv = new Tv(tvDataObj);
+const TVRouter = new Tv(tvDataObjRouter);
 const information = new Information(infoDataobj);
 const content = new Content(contentDataObj);
 const setting = new Setting(settingDataObj);
@@ -692,12 +816,14 @@ myMain.AddRoute("/", "/Bagts", bagts);
 myMain.AddRoute("/", "/sale", sale);
 myMain.AddRoute("/", "/Turees", turees);
 myMain.AddRoute("/", "/Tv", tv);
+myMain.AddRoute("/", "/Look-TV/Index.html", TVRouter);
 myMain.AddRoute("/", "/information", information);
 myMain.AddRoute("/", "/content", content);
 myMain.AddRoute("/", "/setting", setting);
 myMain.AddRoute("/", "/logout", logout);
 myMain.AddRoute("/", "/login", login);
 myMain.AddRoute("/", "/signup", signup);
+
 [...document.getElementsByClassName("main-links")].forEach(element => {
     
     element.addEventListener("click", e => {
@@ -722,9 +848,10 @@ history.pushState = function()
 myMain.OnRoute(location.pathname);
 //myMain.OnRoute("/home");
 //myMain.OnRoute("/Bagts");
-myMain.OnRoute("/sale");
+//myMain.OnRoute("/sale");
 //myMain.OnRoute("/Turees");
 //myMain.OnRoute("/Tv");
+myMain.OnRoute("/Look-TV/Index.html");
 //myMain.OnRoute("/information");
 //myMain.OnRoute("/content");
 //myMain.OnRoute("/setting");
