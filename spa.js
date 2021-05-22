@@ -91,7 +91,7 @@ class Tv {
     }
     TvRender(ren){
       return html`
-      <a href="#">
+      <a href="#" onmouseover="changeSrc('${ren.src}','${ren.name}')" >
         <img src="${ren.src}" alt="${ren.name}" title="${ren.name}">
         <p class="name">${ren.name}</p>
       </a>
@@ -184,7 +184,7 @@ class Tv {
         </section>
           <div class="Televisiz_epir">
             <div class="Tv_title">
-              <img src="${this.data.Tvs[0].tv[0].src}" alt="${this.data.Tvs[0].tv[0].name}" title="${this.data.Tvs[0].tv[0].name}">
+              <img src="${this.data.Tvs[0].tv[0].src}" alt="${this.data.Tvs[0].tv[0].name}" title="${this.data.Tvs[0].tv[0].name} "class="tvsChanges" >
               <h2 class="active_date">
               <span id="hour">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
             </h2>
