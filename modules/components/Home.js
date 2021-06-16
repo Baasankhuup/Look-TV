@@ -1,18 +1,29 @@
 import html from "./utils.js";
 
-class MyMovie extends HTMLElement {
+class MyPay extends HTMLElement {
     constructor() {
         super();
         this.myShadowRoot = this.attachShadow({ mode: "open" });
         this.myShadowRoot.innerHTML = html`
         <style>
+        @media only screen and (max-width: 760px)
+            {h3 {
+                margin: auto;
+                border-bottom: 2px solid; 
+                font-size: 12px;
+            }}
+                h3 {
+                    margin: auto;
+                    border-bottom: 2px solid;
+                }
+            
+        
         </style>
-        <img src="Look-TV/HIMG/${parseInt(this.getAttribute("id"))}.jpg">
-        <img src="Look-TV/HIMG/${parseInt(this.getAttribute("id"))+1}.jpg">
-        <img src="Look-TV/HIMG/${parseInt(this.getAttribute("id"))+2}.jpg">
-        <img src="Look-TV/HIMG/${parseInt(this.getAttribute("id"))+3}.jpg">
+        <h3>Багц</h3>
+        <h3>Төхөөрөмж</h3>
         `
     }
+
 }
 
-customElements.define("my-movie", MyMovie);
+customElements.define("my-pay", MyPay);
