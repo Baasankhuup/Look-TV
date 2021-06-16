@@ -832,10 +832,10 @@ history.pushState = function()
 
 myMain.OnRoute(location.pathname);
 //myMain.OnRoute("/home");
-myMain.OnRoute("/Bagts");
+//myMain.OnRoute("/Bagts");
 //myMain.OnRoute("/sale");
 //myMain.OnRoute("/Turees");
-//myMain.OnRoute("/Tv");
+myMain.OnRoute("/Tv");
 //myMain.OnRoute("/Look-TV/Index.html");
 //myMain.OnRoute("/information");
 //myMain.OnRoute("/content");
