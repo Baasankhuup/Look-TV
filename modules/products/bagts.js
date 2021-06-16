@@ -1,4 +1,4 @@
-import Component from "../components/components.js";
+import Component from "../components/component.js";
 
 export default class Bagst extends Component{
     constructor(objData){
@@ -6,7 +6,7 @@ export default class Bagst extends Component{
         this.bagtsData = objData;
     }
     renderIMG(IMGS){
-      return this.html`<img src="${IMGS.img}" alt="${IMGS.alt}" title="${IMGS.alt}">`
+      return this.html``
     }
     Render(){
       const imgs1 = this.bagtsData.bagts[0].imgs;
@@ -37,7 +37,9 @@ export default class Bagst extends Component{
       <section class="HIT-Movie">
         <h1>${this.bagtsData.bagts[0].title}</h1>
         <a href="LookTv-KinoMedeelel.html">
+        <my-movie id="${this.bagtsData.bagts[0].imgs[0].id}">
         ${A}
+        </my-movie>
         </a>
         <button class="Prev1">❮</button>
         <button class="Next1">❯</button>
@@ -45,7 +47,9 @@ export default class Bagst extends Component{
       <section class="Anime-Movie">
         <h1>${this.bagtsData.bagts[1].title}</h1>
         <a href="LookTv-KinoMedeelel.html">
+        <my-movie id="${this.bagtsData.bagts[1].imgs[0].id}">
           ${B}
+        </my-movie>
         </a>
         <button class="Prev2">❮</button>
         <button class="Next2">❯</button>
@@ -53,7 +57,9 @@ export default class Bagst extends Component{
       <section class="HBO-Movie">
         <h1>${this.bagtsData.bagts[2].title}</h1>
         <a href="LookTv-KinoMedeelel.html">
+        <my-movie id="${this.bagtsData.bagts[2].imgs[0].id}">
           ${C}
+        </my-movie>
         </a>
         <button class="Prev3">❮</button>
         <button class="Next3">❯</button>
@@ -61,7 +67,9 @@ export default class Bagst extends Component{
       <section class="Huuhed">
         <h1>${this.bagtsData.bagts[3].title}</h1>
         <a href="LookTv-KinoMedeelel.html">
+        <my-movie id="${this.bagtsData.bagts[3].imgs[0].id}">
           ${D}
+          <my-movie>
         </a>
         <button class="Prev4">❮</button>
         <button class="Next4">❯</button>
@@ -69,7 +77,9 @@ export default class Bagst extends Component{
       <section class="Russian">
         <h1>${this.bagtsData.bagts[4].title}</h1>
         <a href="LookTv-KinoMedeelel.html">
+        <my-movie id="${this.bagtsData.bagts[4].imgs[0].id}">
           ${E}
+          </my-movie>
         </a>
         <button class="Prev5">❮</button>
         <button class="Next5">❯</button>
