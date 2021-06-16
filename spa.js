@@ -2,7 +2,7 @@
 
 /* jshint esversion: 10 */
 import html from "./modules/components/utils.js"
-import Home from './modules/products/home.js';
+import Home from './modules/products/homes.js';
 import Bagst from './modules/products/bagts.js'
 class MySite{
     constructor(appID){
@@ -457,9 +457,9 @@ const homeDataObj = {
   ],
   Tolbor:"Төлбөрийн мэдээлэл",
   piece:[
-      {UseDate:"1 сар", tolbor:"4000",Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"},
-      {UseDate:"3 сар", tolbor:"12000",Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"},
-      {UseDate:"6 сар", tolbor:"20000",Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"}
+      {UseDate:"1 сар",id:4000,Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"},
+      {UseDate:"3 сар",id:12000,Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"},
+      {UseDate:"6 сар",id:20000,Bagts:"Багц", Tohooromj:"төхөөрөмж",Avah:"авах",divClass:"piece_price2"}
   ]
 }
 //#endregion
@@ -468,42 +468,27 @@ const bagstDataObj = {
   "bagts":[
     {"title":"Хит кино",
       "imgs":[
-        {"img":"Look-TV/HIMG/Hit/1.jpg","alt":"image-1"},
-        {"img":"Look-TV/HIMG/Hit/2.jpg","alt":"image-2"},
-        {"img":"Look-TV/HIMG/Hit/3.jpg","alt":"image-3"},
-        {"img":"Look-TV/HIMG/Hit/4.jpg","alt":"image-4"}
+        {"img":"Look-TV/HIMG/Hit/1.jpg",id:13,"alt":"image-1"}
       ]
     },
     {"title":"Аниме",
         "imgs":[
-          {"img":"Look-TV/HIMG/Anime/1.jpg","alt":"image-1"},
-          {"img":"Look-TV/HIMG/Anime/2.jpg","alt":"image-2"},
-          {"img":"Look-TV/HIMG/Anime/3.jpg","alt":"image-3"},
-          {"img":"Look-TV/HIMG/Anime/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Anime/1.jpg",id:1,"alt":"image-1"}
         ]
       },
         {"title":"HBO олон ангит",
         "imgs":[
-          {"img":"Look-TV/HIMG/Olon-angit/1.jpg","alt":"image-1"},
-          {"img":"Look-TV/HIMG/Olon-angit/2.jpg","alt":"image-2"},
-          {"img":"Look-TV/HIMG/Olon-angit/3.jpg","alt":"image-3"},
-          {"img":"Look-TV/HIMG/Olon-angit/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Olon-angit/1.jpg",id:21,"alt":"image-1"}
         ]
       },
         {"title":"Хүүхдийн Кино",
         "imgs":[
-          {"img":"Look-TV/HIMG/Child/1.jpg","alt":"image-1"},
-          {"img":"Look-TV/HIMG/Child/2.jpg","alt":"image-2"},
-          {"img":"Look-TV/HIMG/Child/3.jpg","alt":"image-3"},
-          {"img":"Look-TV/HIMG/Child/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Child/1.jpg",id:9,"alt":"image-1"}
         ]
       },
         {"title":"Орос-Европ багц",
         "imgs":[
-          {"img":"Look-TV/HIMG/Oros-Europe/1.jpg","alt":"image-1"},
-          {"img":"Look-TV/HIMG/Oros-Europe/2.jpg","alt":"image-2"},
-          {"img":"Look-TV/HIMG/Oros-Europe/3.jpg","alt":"image-3"},
-          {"img":"Look-TV/HIMG/Oros-Europe/4.jpg","alt":"image-4"}
+          {"img":"Look-TV/HIMG/Oros-Europe/1.jpg",id:21,"alt":"image-1"}
         ]
       }
   ]
@@ -847,11 +832,11 @@ history.pushState = function()
 
 myMain.OnRoute(location.pathname);
 //myMain.OnRoute("/home");
-//myMain.OnRoute("/Bagts");
+myMain.OnRoute("/Bagts");
 //myMain.OnRoute("/sale");
 //myMain.OnRoute("/Turees");
 //myMain.OnRoute("/Tv");
-myMain.OnRoute("/Look-TV/Index.html");
+//myMain.OnRoute("/Look-TV/Index.html");
 //myMain.OnRoute("/information");
 //myMain.OnRoute("/content");
 //myMain.OnRoute("/setting");
